@@ -1,0 +1,803 @@
+/* Global Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Default Light Mode Styles (Root Variables) */
+  :root {
+    --background-color-light: #F5DEB3; /* Light background */
+    --background-color-dark: #1A202C; /* Dark background */
+    --text-color-light: #1A1A1A; /* Darker text on light mode */
+    --text-color-dark: #F0F0F0; /* Lighter text on dark mode */
+    --header-background-light: #565c56;
+    --header-background-dark: #333;
+    --link-color-light: #333;
+    --link-color-dark: #ddd;
+    --button-background-light: #4CAF50;
+    --button-background-dark: #555;
+    --button-hover-light: #45a049;
+    --button-hover-dark: #777;
+    --section-background-light: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+    --section-background-dark: rgba(26, 26, 26, 0.9); /* Dark semi-transparent */
+}
+  
+  /* Default Light Mode Styles */
+  body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('/public/images/background-2.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  background-image: url('/public/images/background-2.png');
+}
+
+
+/* Header Styling with Flexbox, Detached from Top and Sides, and Curved Edges */
+header {
+position: sticky;
+top:0;
+
+z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: rgb(26, 24, 24);
+  color: var(--link-color-dark);
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border 0.3s;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 20px;
+  text-align: center;  /* Center the text under the icon */
+}
+
+nav a {
+  color: var(--link-color-dark);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  transition: color 0.3s, background-color 0.3s ease;
+}
+
+/* Icon Styling */
+nav a i {
+  font-size: 2rem;                /* Icon size */
+  margin-bottom: 5px;             /* Space between icon and text */
+  display: block;                 /* Stack the icon above the text */
+  padding: 10px;
+  background-color: #080808;      /* Light background for icons */
+  border-radius: 50%;             /* Circular icon container */
+  width: 50px;                    /* Set width and height for a square box around the icon */
+  height: 50px;
+  margin: 0 auto;                 /* Center the icon within the box */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #bedacc;
+  background-color: #333;         /* Darker background when hovered */
+}
+
+nav a:hover i {
+  transform: scale(1.1);           /* Slightly enlarge the icon on hover */
+  background-color: #8b2ba8;          /* Light background when hovered */
+}
+  
+  /* Button Styling */
+  button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--button-background-light);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-light);
+  }
+ 
+
+  /* public/css/styles.css */
+
+  /* Button Styling */
+.contact-button {
+  background-color: var(--button-background-light);
+  color: #fff;
+}
+
+.contact-button.dark-mode {
+  background-color: var(--button-background-dark);
+}
+
+/* Dark Mode Styles for Individual Elements */
+nav a.dark-mode {
+  color: var(--link-color-dark);
+}
+
+.intro-text h1,
+.intro-text p,
+.skills-section h2 {
+  color: inherit; /* Ensure these elements inherit the current mode text color */
+}
+
+/* Intro Section Styling */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .intro-text {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  .intro-section{
+    background: var(--section-background-light);
+    color: var(--text-color-light);
+   }
+
+  body.dark-mode .intro-section{
+    background: var(--section-background-dark);
+    color: var(--text-color-dark);
+  }
+  .intro-text h1 {
+    font-size: 2.6rem; /* add to 3 rem */
+    margin: 0;
+    font-weight: 700;
+    
+  }
+  
+  .intro-text p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+  
+  /* Social Media Icons */
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;  /* Adds space between the icons */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #b93fbd;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;  /* Makes the icons round */
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #2980b9;
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Contact Buttons Styling */
+.contact-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;  /* Adds space between the buttons */
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #c07e1b;
+    color: #2b2828;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;  /* Makes the button appear as a capsule */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    min-width: 150px; /* Ensures buttons have a minimum width */
+}
+
+.contact-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.intro-image img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+  @media (max-width: 768px) {
+    .contact-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-button {
+      min-width: auto; /* Let the buttons resize to fit the text */
+      margin-bottom: 1rem;
+    }
+  }
+  /* Transparent Section Background */
+section {
+  background-color: transparent;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+  /* Skills Section */
+.skills-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}/* Carousel Skill Box Styling */
+.skill-category {
+  background: var(--section-background-light);
+  color: var(--text-color-light);
+}
+
+body.dark-mode .skill-category {
+  background: var(--section-background-dark);
+  color: var(--text-color-dark);
+}
+/* Carousel Container */
+.skills-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.4s ease;
+}
+
+/* Skill Categories (Boxes) */
+.skill-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 1.5rem;
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 150px;
+}
+
+.skill-category i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.carousel-btn:hover {
+    background-color: #2980b9;
+}
+.carousel-track {
+    transition: transform 0.4s ease;
+}
+
+
+  
+  /* Main Section Styling */
+  main {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+  }
+  
+  section {
+    background-color: var(--section-background-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  /* General spacing between sections */
+section {
+  
+    padding: 2rem 0; /* Space above and below each section */
+}
+
+.skills-section,
+.intro-section,
+.contact-section {
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.intro-section {
+
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  box-shadow: none;/* Extra padding at the top if needed */
+}
+
+.skills-section {
+  background-color: var(--section-background-dark);
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  box-shadow: none; /* Extra padding at the bottom if needed */
+}
+
+  
+  /* Experience and Projects Styling */
+  .experience-item, .project-item {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-item h3, .project-item h3 {
+    font-size: 1.5rem;
+    color: var(--header-background-light);
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-item p, .project-item p {
+    margin: 0.5rem 0;
+  }
+  
+  .experience-item ul, .project-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .experience-item ul li, .project-item ul li {
+    margin-bottom: 0.3rem;
+    color: var(--text-color-light);
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+  
+  header.dark-mode {
+    background-color: var(--header-background-dark);
+  }
+  
+  nav a.dark-mode {
+    color: var(--link-color-dark);
+  }
+  
+  section.dark-mode {
+    background-color: var(--section-background-dark);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Dark Mode Button */
+  button.dark-mode {
+    background-color: var(--button-background-dark);
+  }
+  
+  button.dark-mode:hover {
+    background-color: var(--button-hover-dark);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav a {
+      display: block;
+      margin: 5px 0;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  /* Blinking Dot Styling */
+.blinking-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  background-color: #32CD32; /* Lime Green */
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+}
+
+/* Status Text Styling */
+.status {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color-dark);
+  display: flex;
+  align-items: center;
+}
+/* Timeline Container */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20%; /* Position line on the left side */
+  bottom: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #3498db;
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+  justify-content: flex-end; /* Align items to the right */
+  padding-left: 50px; /* Space between items and line */
+}
+
+/* Year Styling */
+.timeline-year {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3498db;
+  position: relative;
+}
+
+/* Dot for each Year */
+.timeline-year::after {
+  content: "";
+  position: absolute;
+  left: -25px; /* Position dot closer to line */
+  top: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+/* Timeline Content */
+.timeline-content {
+  flex: 4;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 1rem;
+}
+.timeline-content:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings and List Styling */
+.timeline-content h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content ul {
+  color: var(--text-color-light);
+  list-style-type: disc;
+  padding-left: 1.2rem;
+
+}
+
+.timeline-content ul li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+/* Main Projects Section */
+.projects-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.projects-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Project Grid */
+.project-grid {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Project Card */
+.project-card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image */
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Project Details */
+.project-details {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.project-details p strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Project Links Button */
+.project-links .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-links .btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .projects-section h1 {
+    font-size: 2rem;
+  }
+  .project-details h3 {
+    font-size: 1.6rem;
+  }
+
+  .project-details p {
+    font-size: 0.9rem;
+  }
+
+
+  .project-card {
+    width: 100%; /* Full width for each card on small screens */
+  }
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack the project cards vertically on small screens */
+  }
+}
+/* Define fade-in and slide-in animations */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+.slide-in-left {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-in-left.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover */
+.btn {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #3498db; /* change color as needed */
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  transition: color 0.3s;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #398ec7;
+  transition: width 0.3s;
+}
+
+a:hover {
+  color: #101111;
+}
+
+a:hover::after {
+  width: 100%;
+}

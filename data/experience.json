@@ -1,0 +1,35 @@
+[
+  {
+    "year": 2024,
+    "company": "Freelancer",
+    "position": "Fullstack Developer",
+    "duration": "Jun 2024 - Sep 2024",
+    "technologies": ["NestJS", "MySQL", "Flutter", "ElasticSearch", "NextJS"],
+    "description": [
+      "Developed a marketing product with web3 support.",
+      "Created and integrated new modules.",
+      "Optimized existing solutions and refactored database operations."
+    ]
+  },
+  {
+    "year": 2022,
+    "company": "Freelancer",
+    "position": "Fullstack Developer",
+    "duration": "Oct 2022 - Apr 2024",
+    "technologies": ["NodeJS", "ExpressJS", "PostgreSQL", "ReactJS"],
+    "description": [
+      "Developed a CRM system for telecom, banking, and crypto sectors.",
+      "Redesigned CRM chat, improved performance, and added Telegram notifications."
+    ]
+  },
+  {
+    "year": 2018,
+    "company": "Kanyi J & co Advocates",
+    "position": "IT Manager",
+    "duration": "Sep 2018 - Apr 2024",
+    "technologies": ["Support","NodeJS", "ExpressJS", "PostgreSQL", "ReactJS"],
+    "description": [
+      "Managed Everything related to IT."
+    ]
+  }
+]

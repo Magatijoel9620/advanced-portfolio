@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Marketing Product with Web3 Support",
+    "description": "Developed with NestJS, MySQL, Redis, ElasticSearch, and NextJS.",
+    "technologies": ["NestJS", "MySQL", "Redis", "ElasticSearch", "NextJS"],
+    "image": "team.jpg",
+    "url": "https://github.com/Magatijoel9620/fooddeliveryfirebase"
+  },
+  {
+    "name": "CRM System for Telecom",
+    "description": "Built for telecom, banking, and crypto sectors with NodeJS, ExpressJS, PostgreSQL, and ReactJS.",
+    "technologies": ["NodeJS", "ExpressJS", "PostgreSQL", "ReactJS"],
+    "image": "team.jpg",
+    "url": "https://github.com/Magatijoel9620/personalCV"
+  },
+  {
+    "name": "Ecommerce Product",
+    "description": "Developed with NestJS, MySQL, Redis, ElasticSearch, and NextJS.",
+    "technologies": ["NestJS", "MySQL", "Redis", "ElasticSearch", "NextJS"],
+    "image": "team.jpg",
+    "url": "https://github.com/Magatijoel9620/miniEcommerceApp"
+  },
+  {
+    "name": "Banking System for KCK",
+    "description": "Built for telecom, banking, and crypto sectors with NodeJS, ExpressJS, PostgreSQL, and ReactJS.",
+    "technologies": ["NodeJS", "ExpressJS", "PostgreSQL", "ReactJS"],
+    "image": "team.jpg",
+    "url": "https://github.com/Magatijoel9620/personalCV"
+  }
+]

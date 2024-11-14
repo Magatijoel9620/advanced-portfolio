@@ -1,0 +1,111 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+        <main>
+            <!-- Intro Section (Place inside <main> or <section>) -->
+
+            <section id="intro" class="intro-section">
+
+                <div class="intro-container">
+                    <div class="intro-image">
+                        <img src="/images/graduate.jpg" alt="M J ">
+                    </div>
+
+                    <div class="intro-text">
+                        <h1>👋 Hey, I'm Magati Joel</h1>
+                        <p><strong>Backend & Frontend developer</strong></p>
+                        <p>Experienced fullstack developer with over 5 years of experience in building products using
+                            modern technologies (NextJS, NodeJS, PostgreSQL, Python, Flutter, React, Java etc.). I have
+                            a proven ability
+                            to quickly master new fields, including Python and frontend development. Effective both
+                            as an individual contributor and a team member.</p>
+
+                        <!-- Social Media Links -->
+                        <div class="social-links">
+                            <a href="https://github.com/Magatijoel9620" target="_blank" class="social-icon"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/magati-joel" target="_blank" class="social-icon"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/magati_joel" target="_blank" class="social-icon"><i
+                                    class="fab fa-twitter"></i></a>
+                        </div>
+
+                        <div class="contact-buttons">
+                            <a href="mailto:magatijoel@gmail.com" class="contact-button">Contact Me</a>
+                            <a href="/resume/cv5.pdf" class="contact-button">My Resume</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="skills" class="skills-section">
+                <h2>Stack</h2>
+                <div class="skills-carousel">
+                    <!-- Carousel container for skills categories -->
+                    <div class="carousel-track">
+
+
+                        <!-- Tools Skills -->
+                        <div class="skill-category">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools</h3>
+                            <p>Git, Webpack, Docker</p>
+                        </div>
+                        <!-- Backend Skills -->
+                        <div class="skill-category">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend</h3>
+                            <p>Node.js, Express, Django</p>
+                        </div>
+                        <!-- Frontend Skills -->
+                        <div class="skill-category">
+                            <i class="fab fa-html5"></i>
+                            <h3>Frontend</h3>
+                            <p>HTML, CSS, JavaScript, Vue.js, React</p>
+                        </div>
+                        <!-- Database Skills -->
+                        <div class="skill-category">
+                            <i class="fas fa-database"></i>
+                            <h3>Databases</h3>
+                            <p>PostgreSQL, MongoDB, MySQL</p>
+                        </div>
+
+                        <!-- UI Design Skills -->
+                        <div class="skill-category">
+                            <i class="fas fa-palette"></i>
+                            <h3>UI/UX</h3>
+                            <p>Figma, Adobe XD, Sketch</p>
+                        </div>
+
+
+                        <!-- DevOps Skills -->
+                        <div class="skill-category">
+                            <i class="fas fa-cloud"></i>
+                            <h3>DevOps</h3>
+                            <p>AWS, CI/CD, Kubernetes</p>
+                        </div>
+                    </div>
+
+                    <!-- Carousel navigation buttons -->
+                    <button class="carousel-btn prev-btn">&lt;</button>
+                    <button class="carousel-btn next-btn">&gt;</button>
+                </div>
+            </section>
+
+        </main>
+        <script src="/js/script.js"></script>
+</body>
+
+</html>

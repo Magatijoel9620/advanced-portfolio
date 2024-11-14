@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Experience</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+        <main>
+            <section>
+                <div class="timeline">
+                    <% experience.forEach(experience=> { %>
+                        <div class="timeline-item">
+                            <div class="timeline-year">
+                                <%= experience.year %>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>
+                                    <%= experience.position %>, <%= experience.company %> (<%= experience.duration %>)
+                                </h3>
+                                <ul>
+                                    <% if (experience.description && experience.description.length> 0) { %>
+                                        <% experience.description.forEach(desc=> { %>
+                                            <li>
+                                                <%= desc %>
+                                            </li>
+                                            <% }) %>
+                                                <% } else { %>
+                                                    <li>No description available.</li>
+                                                    <% } %>
+                                </ul>
+                                <p><strong>Technologies:</strong>
+                                    <% if (experience.technologies && experience.technologies.length> 0) { %>
+                                        <%= experience.technologies.join(', ') %>
+                                <% } else { %>
+                                    No technologies listed.
+                                <% } %>
+                            </p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
